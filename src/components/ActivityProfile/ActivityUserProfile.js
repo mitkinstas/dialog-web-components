@@ -47,7 +47,7 @@ class ActivityUserProfile extends PureComponent<Props> {
         userName={nick}
         titleClassName={styles.name}
         userNameClassName={styles.nick}
-        emojiSize={22}
+        emojiSize={24}
       />
     );
   }
@@ -59,11 +59,9 @@ class ActivityUserProfile extends PureComponent<Props> {
       return null;
     }
 
-    return (
-      <div className={styles.online}>
-        {online.message}
-      </div>
-    );
+    return (<div className={styles.online}>
+      {online.message}
+    </div>);
   }
 
   renderAbout() {
@@ -88,11 +86,9 @@ class ActivityUserProfile extends PureComponent<Props> {
       return null;
     }
 
-    return (
-      <div className={styles.actions}>
-        {children}
-      </div>
-    );
+    return (<div className={styles.actions}>
+      {children}
+    </div>);
   }
 
   renderProfileContacts() {

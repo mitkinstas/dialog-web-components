@@ -31,12 +31,9 @@ class SidebarPeerItem extends PureComponent<Props> {
 
   renderCounter() {
     const { counter } = this.props;
+
     if (counter > 0) {
-      return (
-        <div className={styles.counter}>
-          {counter}
-        </div>
-      );
+      return <div className={styles.counter}>{counter}</div>;
     }
 
     return null;
@@ -50,10 +47,14 @@ class SidebarPeerItem extends PureComponent<Props> {
     });
 
     return (
-      <div className={className} onClick={this.handleClick} id={`sidebar_peer_item_${info.peer.id}`}>
+      <div
+        className={className}
+        onClick={this.handleClick}
+        id={`sidebar_peer_item_${info.peer.id}`}
+      >
         <PeerAvatar className={styles.avatar} peer={info} online={online} />
         <div className={styles.text}>
-          <PeerInfoTitle title={info.title} titleClassName={styles.title} emojiSize={15} />
+          <PeerInfoTitle title={info.title} titleClassName={styles.title} emojiSize={17} />
         </div>
         {this.renderCounter()}
       </div>

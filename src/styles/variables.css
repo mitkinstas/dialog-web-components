@@ -83,10 +83,6 @@
   --connection-status-height: calc(var(--default-padding-large) * 1.5);
   --connection-status-transition-duration: var(--default-transition-duration);
   --connection-status-translate-size: calc(0 - var(--connection-status-height));
-  /* ContactList */
-  --contact-list-item-border-color: color(#000 alpha(10%));
-  --contact-list-item-padding: var(--default-padding-large);
-  --contact-list-item-hover-background: #f2f2f2;
   /* Dragndrop */
   --dragndrop-width: 740px;
   --dragndrop-height: 440px;
@@ -191,15 +187,6 @@
   --message-unread-color: color(#f2f2f2 alpha(25%));
   --message-state-border-width: 3px;
   --message-transition-duration: var(--default-transition-duration);
-  /* MessageMedia */
-  --message-media-font-family: var(--default-font-family);
-  /* MessageState */
-  --message-state-font-family: var(--default-font-family);
-  --message-state-font-size: 13px;
-  --message-state-color: color(#000 alpha(60%));
-  --message-state-avatar-padding: 4px;
-  --message-state-dot-size: 10px;
-  --message-state-dot-color: color(#000 alpha(30%));
   /* Sidebar */
   /* SidebarFooter */
   --sidebar-footer-font-family: var(--default-font-family);

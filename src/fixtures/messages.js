@@ -50,7 +50,8 @@ module.exports = [
     state: 'error',
     content: {
       type: 'text',
-      text: 'Quisque sollicitudin purus eget dui imperdiet, sed imperdiet dui mollis.'
+      text:
+        'Quisque sollicitudin purus eget dui :cop::skin-tone-4: imperdiet, sed imperdiet dui mollis.'
     }
   },
   {

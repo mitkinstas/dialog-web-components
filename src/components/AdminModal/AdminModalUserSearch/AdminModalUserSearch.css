@@ -12,7 +12,7 @@
 /* Styles */
 .container {
   box-shadow: inset 0 -1px 0 0 color(#000 alpha(10%));
-  background-color: #f2f0f5;
+  background-color: #f9f9f9;
   padding: 8px 32px;
   display: flex;
 }

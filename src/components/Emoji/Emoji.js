@@ -38,15 +38,21 @@ class Emoji extends PureComponent<Props> {
     if (shouldUseImage(emoji.char)) {
       const className = classNames(styles.image, this.props.className);
 
+      let marginTop = 0;
+      if (this.props.size > 15) {
+        marginTop = this.props.inline ? -2 : 0;
+      }
+
       const style = {
         width: `${this.props.size + 2}px`,
         height: `${this.props.size + 2}px`,
         backgroundImage: SPRITE_IMAGE,
         backgroundPosition: `${SPRITE_POSITION_MUL * emoji.x}% ${SPRITE_POSITION_MUL * emoji.y}%`,
         backgroundSize: `${SPRITE_BG_SIZE}%`,
-        marginBottom: this.props.inline ? this.props.size * 0.17 : 0,
-        marginRight: this.props.inline ? 1 : 0,
-        verticalAlign: this.props.inline ? 'middle' : 'sub'
+        // marginBottom: this.props.inline ? this.props.size * 0.17 : 0,
+        // marginRight: this.props.inline ? 1 : 0,
+        // marginTop,
+        // verticalAlign: this.props.inline ? 'middle' : 'sub'
       };
 
       return (
@@ -57,10 +63,12 @@ class Emoji extends PureComponent<Props> {
     }
 
     const className = classNames(styles.char, this.props.className);
-    const emojiStyle = {
-      height: `${this.props.size}px`,
+    const emojiStyle = this.props.inline ? {
+      fontSize: `${this.props.size}px`
+    } : {
       fontSize: `${this.props.size}px`,
-      lineHeight: this.props.inline ? 1.3 : 1.2
+      height: `${this.props.size}px`,
+      lineHeight: `${this.props.size * 1.19}px`
     };
 
     return (

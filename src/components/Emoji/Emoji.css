@@ -4,17 +4,21 @@
 
 @import '../../styles/variables.css';
 
+.image,
+.char {
+  all: initial;
+}
+
 .image {
   display: inline-block;
   overflow: hidden;
   cursor: inherit;
   line-height: inherit;
   background-size: 100%;
-
-  /* hide emoji char */
   color: transparent !important;
   text-shadow: none;
   text-indent: -9000px;
+  vertical-align: inherit;
 }
 
 .char {
@@ -25,4 +29,6 @@
   font-family: var(--font-emoji);
   font-weight: normal;
   text-size-adjust: 100%;
+  letter-spacing: 1px;
+  text-align: center;
 }
